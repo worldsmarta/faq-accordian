@@ -1,0 +1,86 @@
+.bg_col{
+    background-image: linear-gradient(#a267e8,#7065e8);
+}
+
+.box_width{
+    width: 800px;
+}
+
+@media screen and (max-width:820px) {
+    .box_width{
+         width: auto;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    
+    
+
+}
+
+.question {
+  position: relative;
+  margin: 20px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+.question .label {
+  position: relative;
+  color: darkgray;
+  font-weight: bold;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+.question .label:hover{
+    color: red;
+}
+
+/* Positions the plus sign from the right */
+.question .label::before {
+  content:url('icon-arrow-down.svg');
+  color: black;
+  position: absolute;
+  top:-10px;
+  right: -5px;
+  font-size: 30px;
+}
+
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+.content {
+  position: relative;
+  background: white;
+  height: 0;
+  /* font-size: 20px; */
+  text-align: justify;
+  /* width: 780px; */
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+/* Unhides the content part when active. Sets the height */
+.active .content {
+  height: 50px;
+}
+
+/* Changes from plus sign to negative sign once active */
+.active .label{
+    color: black;
+}
+
+.active .label:hover{
+    color: black;
+}
+.active .label::before {
+  content: url('icon-arrow-down.svg');
+  transform: rotate(180deg);
+}
+
+/* Adds a horizontal line between the contents */
+hr {
+  width: 100;
+  margin-left: 0;
+  /* border: 1px solid grey; */
+}
